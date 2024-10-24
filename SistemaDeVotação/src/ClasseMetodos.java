@@ -24,17 +24,17 @@ public class ClasseMetodos {
         int aux, i, j;
         for (i = 0; i < 200; i++) {
             for (j = 0; j < 200 - i - 1; j++) {
-                if (votacao[i].NumeroSecao > votacao[i + 1].NumeroSecao ) {
-                    aux = votacao[i].NumeroSecao;
-                    votacao[i].NumeroSecao = votacao[i + 1].NumeroSecao;
-                    votacao[i + 1].NumeroSecao = aux;
+                if (votacao[j].NumeroSecao > votacao[j + 1].NumeroSecao ) {
+                    aux = votacao[j].NumeroSecao;
+                    votacao[j].NumeroSecao = votacao[j + 1].NumeroSecao;
+                    votacao[j + 1].NumeroSecao = aux;
                 }
             }
         }
         return votacao;
     }
 
-    //estou tendo erro ao tentar gravar o arquivo
+
     public Votacao[] pGravarArquivo(Votacao[] votacao) throws IOException {
         int i;
         //classe BufferedWriter para escrever no arquivo

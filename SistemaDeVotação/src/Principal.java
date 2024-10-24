@@ -9,8 +9,12 @@ public class Principal {
 
             int i, opc = 0;
             while(opc!=9){
-                    opc = Integer.parseInt(JOptionPane.showInputDialog("SISTEMA DE VOTAÇÃO\n1 – Carregar Seção/Número Eleitor\n" +
-                            "2 – Classificar por Seção \n3 – Gravar Registros \n4 – Mostrar Indicadores\n9 – Finalizar "));
+                    opc = Integer.parseInt(JOptionPane.showInputDialog("SISTEMA DE VOTAÇÃO" +
+                            "\n1 – Carregar Seção/Número Eleitor" +
+                            "\n2 – Classificar por Seção " +
+                            "\n3 – Gravar Registros " +
+                            "\n4 – Mostrar Indicadores" +
+                            "\n9 – Finalizar "));
 
                     switch(opc){
                             case 1:
@@ -36,9 +40,11 @@ public class Principal {
                                     switch (opc){
                                         case 1:
                                             metodos.pQtdEleitores(votacao);
+
                                             break;
                                         case 2:
                                             metodos.pSecaoMaiorMenor(votacao);
+
                                             break;
                                         case 3:
                                             metodos.pQtdVotos(votacao);
